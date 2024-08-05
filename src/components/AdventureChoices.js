@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { adventureOptions } from "../features/adventureOptions";
 
-export function AdventureChoices (props) {
-    const { adventure, setAdventure} = props;
+export function AdventureChoices (setAdventure) {
     const [ rescueChoice, setRescueChoice ] = useState("Prince");
     const [ customRescue, setCustomRescue ] = useState("");
     const [ treasureChoice, setTreasureChoice ] = useState("Magical Weapon");
@@ -33,7 +32,7 @@ export function AdventureChoices (props) {
                     <select name="dropdown" onChange={(e) => setRescueChoice(e.target.value)}>
                      {adventureOptions.rescue.map((rescuee, key) => (
                         <option key={key} value={rescuee}>{rescuee}</option>
-                     ))}
+                    ))}
                         <option value="custom">Custom</option>
                     </select>
                     {rescueChoice === "custom" && (
