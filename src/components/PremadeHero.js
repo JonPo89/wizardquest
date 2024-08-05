@@ -10,8 +10,6 @@ export function PremadeHero(props) {
         setWeapon(hero.weapon);
         setTrait(hero.trait);
         setActiveHero(hero.id);
-        console.log(hero.id)
-        console.log(activeHero);
     };
 
     return (

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { adventureOptions } from "../features/adventureOptions";
 
-export function AdventureChoices (setAdventure) {
+export function AdventureChoices (props) {
+    const {setAdventure} = props;
     const [ rescueChoice, setRescueChoice ] = useState("Prince");
     const [ customRescue, setCustomRescue ] = useState("");
     const [ treasureChoice, setTreasureChoice ] = useState("Magical Weapon");
