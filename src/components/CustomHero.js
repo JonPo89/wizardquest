@@ -1,5 +1,4 @@
-import React, {useState} from "react";
-import { heroList } from "../features/heroList";
+import React from "react";
 
 export function CustomHero (props) {
     const { name, setName, weapon, setWeapon, trait, setTrait} = props;
@@ -8,9 +7,11 @@ export function CustomHero (props) {
     const onChangeName = (e) => {
         setName(e.target.value);
     };
+
     const onChangeWeapon = (e) => {
         setWeapon(e.target.value);
     };
+
     const onChangeTrait = (e) => {
         setTrait(e.target.value);
     };

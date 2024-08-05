@@ -35,7 +35,7 @@ function App() {
     submitStory(botModel, chosenHero, adventure ).then((response) => {
       setStoryLog(prevLog => [...prevLog, JSON.stringify(response)]);
     }).catch((error) => {
-      console.log("Error fetching story:". error)
+      console.log("Error fetching story:" + error)
     });
   }
   
