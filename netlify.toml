@@ -1,0 +1,5 @@
+[[redirects]]
+  force = true
+  from = "/src/features/submitStory.js"
+  status = 200
+  to = "https://www.cloudflare.com/src/features/submitStory.js"
