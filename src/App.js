@@ -4,6 +4,7 @@ import { ChooseHero } from './components/ChooseHero';
 import { Story } from './components/Story';
 import './App.css';
 import { storyGenerator } from './features/storyGenerator';
+import { summariseStory } from './features/summariseStory';
 
 function App() {
   const [name, setName] = useState("");
@@ -37,12 +38,20 @@ function App() {
         setStoryLog(prevLog => [...prevLog, JSON.stringify(response)]);
         setResponseHistory(prevLog => [...prevLog, {role: 'assistant', content: JSON.stringify(response)}]);
         setIsFetchingStory(false)
+        if (responseHistory.length > 6) {
+          console.log("summarising Story")
+          summariseStory(responseHistory).then((response) => {
+            setResponseHistory({role: 'assistant', content: JSON.stringify(response)});
+          }).catch((error) => {
+            console.log("Error summarising story:" + error)
+          });}
       }).catch((error) => {
         console.log("Error fetching story:" + error)
         setIsFetchingStory(false);
       });
     }
   },[isFetchingStory, chosenHero, responseHistory])
+
 
   function continueStory() {
     console.log(chosenHero.name + chosenHero.weapon + chosenHero.trait)
