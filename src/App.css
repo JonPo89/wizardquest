@@ -13,4 +13,5 @@
   background-color: pink;
   display: inline-flex;
   flex-direction: column;
+  overflow:scroll;
 }
