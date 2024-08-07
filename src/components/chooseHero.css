@@ -3,3 +3,12 @@
     width: 100%;
     justify-content: space-around;
 }
+
+.heroSelect:hover {
+    cursor: pointer;
+}
+
+#premade {
+    width: 100%;
+    height: 100%;
+}

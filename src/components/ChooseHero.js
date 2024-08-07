@@ -6,11 +6,11 @@ import './chooseHero.css';
 export function ChooseHero (props) {
     const {name, setName, weapon, setWeapon, trait, setTrait, onSubmit} = props;
     const [premadeToggle, setPremadeToggle] = useState(false);
-    const welcomeMessage = "Welcome young adventurer, we are about to take a journey full of dangers, treasures, and glory! First tell me a little about yourself."
+    const welcomeMessage = ""
 
     return (
-        <div className="box">
-            <h3>{welcomeMessage}</h3>
+        <div className="internal">
+            <p>Welcome young adventurer, we are about to take a journey full of dangers, treasures, and glory!<br/> First tell me a little about yourself.</p>
             {!premadeToggle ?
                 <PremadeHero name={name} setName={setName} weapon={weapon} setWeapon={setWeapon} trait={trait} setTrait={setTrait}/>
             :

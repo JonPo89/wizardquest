@@ -13,7 +13,7 @@ export function PremadeHero(props) {
     };
 
     return (
-        <div>
+        <div id="premade">
             <h2>Select an already famous Hero:</h2>
             <div id="heroLineup">
                 {Object.keys(heroList).map(key => {
@@ -23,8 +23,10 @@ export function PremadeHero(props) {
                             <h2>{hero.name}</h2>
                             <h3>The {hero.race} {hero.class}</h3>
                             <img src={hero.image} alt={hero.name} />
-                            <h4>Trait: {hero.trait}</h4>
-                            <h4>Weapon: {hero.weapon}</h4>
+                            <h4>Trait:</h4>
+                            <p>{hero.trait}</p>
+                            <h4>Weapon:</h4>
+                            <p>{hero.weapon}</p>
                             
                         </div>
                     );
