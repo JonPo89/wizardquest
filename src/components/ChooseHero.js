@@ -6,7 +6,6 @@ import './chooseHero.css';
 export function ChooseHero (props) {
     const {name, setName, weapon, setWeapon, trait, setTrait, onSubmit} = props;
     const [premadeToggle, setPremadeToggle] = useState(false);
-    const welcomeMessage = ""
 
     return (
         <div className="internal">
