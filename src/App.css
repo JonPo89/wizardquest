@@ -79,16 +79,26 @@ h4 {
 .box {
   width: 90%;
   height: 90vh;
+  background-color: rgba(250,240,226,1);
   background: linear-gradient(0deg, rgba(203,192,177,1) 0%, rgba(250,240,226,1) 8%, rgba(250,240,226,1) 92%, rgba(203,192,177,1) 100%);
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  overflow-y:scroll;
-  padding: 2rem;
+  padding: 1rem 2rem;
   box-sizing: border-box;
   box-shadow: 5px 5px 18px 3px rgba(0,0,0,0.53);
   border-radius: 10px;
+}
+
+.internal {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y:scroll;
 }
 
 button{
@@ -97,9 +107,10 @@ button{
   border-radius: 5px;
   border: 1px solid var(--heading-colour);
   color: var(var(--heading-colour));
-  margin: 1rem;
+  margin: .5rem;
   padding: 1rem;
   line-height: 1rem;
+  font-size: 1.2rem;
 }
 
 input{
@@ -114,12 +125,3 @@ input{
   font-size: 1.2rem;
 }
 
-.internal {
-
-  height: 100%;
-  width: 100%;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}

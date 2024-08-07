@@ -16,3 +16,19 @@
 .logContent {
     color: var(--logEntry-colour);
 }
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+  
+#wizardThink {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+    animation: spin 2s ease-in-out infinite;
+}

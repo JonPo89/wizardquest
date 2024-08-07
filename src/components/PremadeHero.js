@@ -13,7 +13,7 @@ export function PremadeHero(props) {
     };
 
     return (
-        <div id="premade">
+        <div id="premadeHero" className="heroCreate">
             <h2>Select an already famous Hero:</h2>
             <div id="heroLineup">
                 {Object.keys(heroList).map(key => {
@@ -21,7 +21,6 @@ export function PremadeHero(props) {
                     return (
                         <div className="heroSelect" key={hero.id} onClick={() => submitExistingHero(hero)} style={{backgroundColor: activeHero===hero.id ? "blue" : "pink"}}>
                             <h2>{hero.name}</h2>
-                            <h3>The {hero.race} {hero.class}</h3>
                             <img src={hero.image} alt={hero.name} />
                             <h4>Trait:</h4>
                             <p>{hero.trait}</p>

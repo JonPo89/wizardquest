@@ -17,9 +17,9 @@ export function CustomHero (props) {
     };
 
     return (
-        <div>
+        <div className="heroCreate">
             <h2>Create your own story!</h2>
-            <div id="heroLineup">
+            <div id="createHeroDetails">
                     <>
                         <input type="text" id="heroName" placeholder="Name" value={name} onChange={onChangeName}/>
                         <input type="text" id="heroWeapon" placeholder="Weapon" value={weapon} onChange={onChangeWeapon}/>

@@ -92,7 +92,7 @@ function App() {
       {!chosenHero ?
         <ChooseHero name={name} setName={setName} weapon={weapon} setWeapon={setWeapon} trait={trait} setTrait={setTrait} onSubmit={onSubmitHero} />
         :
-        <Story chosenHero={chosenHero} storyLog={storyLog} continueStory={continueStory} onClickStartAgain={onClickStartAgain} userResponse={userResponse} setUserResponse={setUserResponse} respondToStory={respondToStory} />
+        <Story chosenHero={chosenHero} storyLog={storyLog} continueStory={continueStory} onClickStartAgain={onClickStartAgain} userResponse={userResponse} setUserResponse={setUserResponse} respondToStory={respondToStory} isFetchingStory={isFetchingStory} summariseStory={summariseStory} />
       }
       </div>
     </div>
