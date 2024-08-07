@@ -1,12 +1,36 @@
-#heroLineup { 
+#premadeHeroLineup { 
     display: inline-flex;
     width: 100%;
     justify-content: space-around;
     margin-top: 1rem;
 }
 
+.heroLineup{
+    margin-top: 1rem;
+}
+
+.heroSelect {
+    width: 30%;
+    overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 5px solid var(--medium-colour);
+    transition: all .5s;
+}
+
+.heroSelect:hover {
+    background-color: var(--light-colour);
+    box-shadow: 0 0 10px 3px rgba(0,0,0,0.3);
+}
+
+.heroSelect img {
+    width: 80%;
+}
+
 .heroSelect:hover {
     cursor: pointer;
+    
 }
 
 .heroCreate {
@@ -14,3 +38,18 @@
     height: 100%;
     margin-top: 1rem;
 }
+
+@media only screen and (max-width: 750px) {
+
+    #premadeHeroLineup {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .heroSelect {
+        width: 60%;
+        margin-bottom: 1rem;
+    }
+
+}
+  

@@ -40,7 +40,8 @@ h4 {
   --storyLog-colour: rgb(116, 60, 32);
   --primary-colour: rgb(3,46,46);
   --medium-colour: rgb(210, 196, 177);
-  --light-colour: rgb(230, 220, 206);
+  --norm-colour: rgb(233, 219, 196);
+  --light-colour: rgb(241, 230, 211);
   --dark-colour: rgb(0,30,32);
 }
 
@@ -103,7 +104,7 @@ h4 {
 
 button{
   text-align: center;
-  background-color: var(--medium-colour);
+  background-color: var(--norm-colour);
   border-radius: 5px;
   border: 1px solid var(--heading-colour);
   color: var(var(--heading-colour));
@@ -111,6 +112,15 @@ button{
   padding: 1rem;
   line-height: 1rem;
   font-size: 1.2rem;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background-color: var(--light-colour);
+}
+
+button:active {
+  background-color: var(--medium-colour);
 }
 
 input{
