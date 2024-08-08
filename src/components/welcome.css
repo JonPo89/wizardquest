@@ -1,0 +1,28 @@
+#welcome {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    justify-content: end;
+
+}
+
+#welcome h2 {
+    color: var(--heading-colour);
+    font-size: 3rem;
+}
+
+#welcomeWizard {
+    max-height: 80%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#welcome:hover {
+    cursor: pointer;
+}
+
+#welcomeMessage {
+    width: 100%;
+    border-top: 5px solid var(--heading-colour);
+    font-weight: bold;
+    padding-top: 0.5rem
+}

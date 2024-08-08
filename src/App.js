@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Welcome } from './components/Welcome';
 import { Header } from './components/Header';
 import { ChooseHero } from './components/ChooseHero';
 import { Story } from './components/Story';
@@ -6,6 +7,7 @@ import './App.css';
 import { storyGenerator } from './features/storyGenerator';
 
 function App() {
+  const [welcome, setWelcome] = useState(true);
   const [name, setName] = useState("");
   const [weapon, setWeapon] = useState("");
   const [trait, setTrait] = useState("");
@@ -24,7 +26,7 @@ function App() {
         trait
       };
       setChosenHero(newHero);
-      setStoryLog(prevLog => [...prevLog, {role: 'Wizard', content: `Ah yes, ${name} I've heard of you! Tales of your ${trait} and skills with the ${weapon} have spread far across the land, but even so, this adventure will be full of perals that you have never encountered before. If you think that you are ready, let's continue...`}]);
+      setStoryLog(prevLog => [...prevLog, {role: 'Wizard', content: `Ah yes, ${name} I've heard of you! Tales of your ${trait} and skills with the ${weapon} have spread far across the land, but even so, this adventure will be full of perals that you have never encountered before.  I will give you some guidance, but the adventure is yours to control! If you think that you are ready, let's continue...`}]);
     } else {
       alert("Please fill out all fields");
     }
@@ -63,6 +65,10 @@ function App() {
     }
   }, [summariseStory, chosenHero, responseHistory]);
 
+  function welcomeClick() {
+    setWelcome(false);
+  }
+
   function continueStory() {
     console.log(chosenHero.name + chosenHero.weapon + chosenHero.trait);
     setIsFetchingStory(true);
@@ -88,12 +94,19 @@ function App() {
   return (
     <div className="App">
       <div className="box">
-        <Header onClickStartAgain={onClickStartAgain} />
-      {!chosenHero ?
-        <ChooseHero name={name} setName={setName} weapon={weapon} setWeapon={setWeapon} trait={trait} setTrait={setTrait} onSubmit={onSubmitHero} />
-        :
-        <Story chosenHero={chosenHero} storyLog={storyLog} continueStory={continueStory} onClickStartAgain={onClickStartAgain} userResponse={userResponse} setUserResponse={setUserResponse} respondToStory={respondToStory} isFetchingStory={isFetchingStory} summariseStory={summariseStory} />
-      }
+        {welcome ? 
+          <Welcome welcomeClick={welcomeClick}/> 
+        : (
+          <>
+          <Header onClickStartAgain={onClickStartAgain} />
+            {!chosenHero ?
+              <ChooseHero name={name} setName={setName} weapon={weapon} setWeapon={setWeapon} trait={trait} setTrait={setTrait} onSubmit={onSubmitHero} />
+              :
+              <Story chosenHero={chosenHero} storyLog={storyLog} continueStory={continueStory} onClickStartAgain={onClickStartAgain} userResponse={userResponse} setUserResponse={setUserResponse} respondToStory={respondToStory} isFetchingStory={isFetchingStory} summariseStory={summariseStory} />
+            }
+          </>
+        )}
+        
       </div>
     </div>
   );

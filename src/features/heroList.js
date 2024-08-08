@@ -19,7 +19,7 @@ export const heroList = {
     },
     dwarf: {
         id: 2,
-        name: "Slimli",
+        name: "Gymli",
         weapon: "Axe",
         trait: "Strength",
         image: slimli

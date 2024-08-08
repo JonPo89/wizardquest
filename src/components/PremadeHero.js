@@ -15,7 +15,7 @@ export function PremadeHero(props) {
 
     return (
         <div id="premadeHero" className="heroCreate">
-            <h2>Select an already famous Hero:</h2>
+            <p>An already famous Hero?</p>
             <div id="premadeHeroLineup" className="heroLineup">
                 {Object.keys(heroList).map(key => {
                     const hero = heroList[key];

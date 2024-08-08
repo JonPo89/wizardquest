@@ -31,4 +31,5 @@
     width: 4rem;
     object-fit: contain;
     animation: spin 2s ease-in-out infinite;
+    margin-bottom: 1rem;
 }

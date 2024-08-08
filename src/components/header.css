@@ -6,6 +6,10 @@ header{
     border-bottom: 1px solid var(--heading-colour);
 }
 
+header h1{
+    color: var(--heading-colour);
+}
+
 
 #restartAdventure {
     padding: .2rem;

@@ -9,7 +9,7 @@ export function ChooseHero (props) {
 
     return (
         <div className="internal">
-            <p>First tell me a little about yourself.</p>
+            <p>First, who are you?</p>
             {!premadeToggle ?
                 <PremadeHero name={name} setName={setName} weapon={weapon} setWeapon={setWeapon} trait={trait} setTrait={setTrait}/>
             :

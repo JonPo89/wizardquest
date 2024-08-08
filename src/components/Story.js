@@ -12,6 +12,12 @@ export function Story(props) {
         }
     },[storyLog])
 
+    function handleKeyDown(event) {
+        if (event.key === 'Enter') {
+            respondToStory();
+        }
+    }
+
 
     return (
         <div className="internal" ref={storyLogRef}>
@@ -39,6 +45,7 @@ export function Story(props) {
                 placeholder="What would you like to do?"
                 value={userResponse}
                 onChange={(e) => setUserResponse(e.target.value)}
+                onKeyDown={handleKeyDown}
             />
             <button onClick={respondToStory}>Submit</button>
             </>
