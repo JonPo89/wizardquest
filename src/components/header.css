@@ -4,10 +4,13 @@ header{
     margin-bottom: 1rem;
     width: 100%;
     border-bottom: 1px solid var(--heading-colour);
+    padding-bottom: 0.5rem;
 }
 
 header h1{
     color: var(--heading-colour);
+    padding: 0;
+    margin: 0;
 }
 
 
